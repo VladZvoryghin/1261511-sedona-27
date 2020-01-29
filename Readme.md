@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Vlad Zvorygin](https://up.htmlacademy.ru/htmlcss/27/user/1261511).
-* Наставник: we'll see.
+* Наставник: Дмитрий Машкевич =^.^=
 
 ---
 
