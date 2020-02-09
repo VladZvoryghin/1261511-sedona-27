@@ -24,12 +24,85 @@
 		<h1 class="visually-hidden page-title">Каталог гостиниц</h1>
 
 		<section class="filters">
-			<h2 class="visually-hidden">Фильтр и сортировка</h2>
-			<!-- Здесь будет форма фильтра -->
+			<h2 class="visually-hidden">Параметры поиска</h2>
+			<form action="https://echo.htmlacademy.ru" metho="get">
+				<fieldset>
+					<legend>Инфраструктура</legend>
+					<ul>
+						<li>
+							<label>
+								Бассейн
+								<input type="checkbox" name="pool" checked>
+							</label>
+						</li>
+						<li>
+							<label>
+								Парковка
+								<input type="checkbox" name="parking">
+							</label>
+						</li>
+						<li>
+							<label>
+								Wi-Fi
+								<input type="checkbox" name="wifi">
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li>
+							<label>
+								Гостиница
+								<input type="checkbox" name="hotel" checked>
+							</label>
+						</li>
+						<li>
+							<label>
+								Мотель
+								<input type="checkbox" name="motel" checked>
+							</label>
+						</li>
+						<li>
+							<label>
+								Апартаменты
+								<input type="checkbox" name="apartments" checked>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+
+				<fieldset>
+					<legend>Стоимость в сутки:</legend>
+					<label for="price-from">От </label>
+					<input type="number" id="price-from" name="price-from" value="0">
+					<label for="price-to">До </label>
+					<input type="number" id="price-to" name="price-to" value="3000">
+				</fieldset>
+
+				<button type="submit">Показать</button>
+			</form>
+
 		</section>
 
 		<section>
 			<h2 class="visually-hidden">Результаты поиска</h2>
+
+			<span>Найдено: </span>
+			
+			<h3>Сортировка:</h3>
+			<button type="button" name="sort_by_price">По цене</button>
+			<button type="button" name="sort_by_type">По типу</button>
+			<button type="button" name="sort_by_rating">По рейтингу</button>
+
+			<button type="button" name="sort_ascend">
+				<span class="visually-hidden">По возрастанию</span>
+			</button>
+			<button type="button" name="sort_descend">
+				<span class="visually-hidden">По убыванию</span>
+			</button>
 
 			<ul>
 

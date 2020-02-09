@@ -7,7 +7,7 @@
 <body>
 	<header>
 		<nav>
-			<a>
+			<a href="#">
 				<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
 			</a>
 
@@ -29,7 +29,7 @@
 
 		<img src="img/i_background.jpg" width="1200" height="773" alt="Фото Седоны">
 
-		<img src="img/polygon.svg" width="1202" height="59">
+		<img src="img/polygon.svg" width="1202" height="59" alt="Декоративное изображение">
 
 		<section>
 			<h2 class="visually-hidden">О Седоне</h2>
@@ -47,10 +47,38 @@
 				Укажите предполагаемые даты поездки,<br>
 				и мы покажем вам лучшие предложения гостиниц в Седоне
 			</p>
-			<!-- Здесь будет форма -->
-			<button type="button">Найти</button>
-			
+			<p>
+				<button type="button" name="show_search_form">Поиск гостиницы в Седоне</button>
+			</p>
+			<form action="https://echo.htmlacademy.ru" class="modal model-open" metho="get">
+				<label>
+					<p>Дата заезда: </p>
+					<input type="date" name="checkin_date" value="2017-04-24">
+					<button type="button">
+						<img src="img/calendar.svg" alt="Выбор даты заезда" width="21" height="22">
+					</button>
+				</label>
+				<label>
+					<p>Дата выезда: </p>
+					<input type="date" name="checkout_date" value="2017-07-04">
+					<button type="button">
+						<img src="img/calendar.svg" alt="Выбор даты выезда" width="21" height="22">
+					</button>
+				</label>
+
+				<p>
+					<label for="field_adults_qty">Взрослые:</label>
+					<input type="number" name="adults_qty" id="field_adults_qty" value="2">
+					
+					<label for="field_kids_qty">Дети:</label>
+					<input type="number" name="kids_qty" id="field_kids_qty" value="0">
+				</p>
+				
+				<button type="submit">Найти</button>
+			</form>
 		</section>
+
+		<img src="img/index_geo_map.png" alt="Карта штата и города Седона" width="1200" height="593">
 	</main>
 
 	<footer>
