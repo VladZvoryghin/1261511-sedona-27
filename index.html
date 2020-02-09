@@ -25,17 +25,16 @@
 
 		<h1 class="page-title visually-hidden">Добро пожаловать в Седону</h1>
 		
-		<img src="img/welcome.png" width="459" height="353" alt="Weclome to the gorgeous Sedona 'because the Grand Canyon sucks'">
+		<!-- <img src="img/welcome.png" width="459" height="353" alt="Weclome to the gorgeous Sedona 'because the Grand Canyon sucks'"> -->
 
-		<img src="img/i_background.jpg" width="1200" height="773" alt="Фото Седоны">
+		<!-- <img src="img/i_background.jpg" width="1200" height="773" alt="Фото Седоны"> -->
 
-		<img src="img/polygon.svg" width="1202" height="59" alt="Декоративное изображение">
+		<!-- <img src="img/polygon.svg" width="1202" height="59" alt="Декоративное изображение"> -->
 
 		<section>
 			<h2 class="visually-hidden">О Седоне</h2>
 			<p class="big-slogzn">
-				Седона - небольной городок в Аризоне,<br>
-				заслуживающий большего!
+				Седона - небольной городок в Аризоне, заслуживающий большего!
 			</p>
 			<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 		</section>
@@ -47,31 +46,32 @@
 				Укажите предполагаемые даты поездки,<br>
 				и мы покажем вам лучшие предложения гостиниц в Седоне
 			</p>
-			<p>
-				<button type="button" name="show_search_form">Поиск гостиницы в Седоне</button>
-			</p>
-			<form action="https://echo.htmlacademy.ru" class="modal model-open" metho="get">
-				<label>
-					<p>Дата заезда: </p>
-					<input type="date" name="checkin_date" value="2017-04-24">
-					<button type="button">
-						<img src="img/calendar.svg" alt="Выбор даты заезда" width="21" height="22">
-					</button>
-				</label>
-				<label>
-					<p>Дата выезда: </p>
-					<input type="date" name="checkout_date" value="2017-07-04">
-					<button type="button">
-						<img src="img/calendar.svg" alt="Выбор даты выезда" width="21" height="22">
-					</button>
-				</label>
+
+			<button type="button" name="show-search-form">Поиск гостиницы в Седоне</button>
+
+			<form action="https://echo.htmlacademy.ru" class="modal model-open" method="get">
+				<p>
+					<label for="checkin-date">Дата заезда: </label>
+					<input type="text" name="checkin-date" id="checkin-date" value="2017-04-24">
+					<button type="button">Выбор даты заезда</button>
+				</p>
 
 				<p>
-					<label for="field_adults_qty">Взрослые:</label>
-					<input type="number" name="adults_qty" id="field_adults_qty" value="2">
+					<label for="checkout-date">Дата выезда: </label>
+					<input type="text" name="checkout-date" id="checkout-date" value="2017-07-04">
+					<button type="button">Выбор даты выезда</button>
+				</p>
+
+				<p>
+					<label for="field-adults-qty">Взрослые:</label>
+					<button type="button plus-action"><span class="visually-hidden">Плюс</span></button>
+					<input type="text" name="adults-qty" id="field-adults-qty" value="2">
+					<button type="button minus-action"><span class="visually-hidden">Минус</span></button>
 					
-					<label for="field_kids_qty">Дети:</label>
-					<input type="number" name="kids_qty" id="field_kids_qty" value="0">
+					<label for="field-kids-qty">Дети:</label>
+					<button type="button plus-action"><span class="visually-hidden">Плюс</span></button>
+					<input type="number" name="kids-qty" id="field-kids-qty" value="0">
+					<button type="button minus-action"><span class="visually-hidden">Минус</span></button>
 				</p>
 				
 				<button type="submit">Найти</button>
@@ -83,10 +83,8 @@
 
 	<footer>
 
-		<p>
-			#visitsedona<br>
-			тел: +7(495) 666-02-66
-		</p>
+		<p>#visitsedona</p>
+		<p>тел: +7(495) 666-02-66</p>
 
 		<div>
 			<ul>
