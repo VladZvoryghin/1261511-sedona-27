@@ -77,9 +77,9 @@
 				<fieldset>
 					<legend>Стоимость в сутки:</legend>
 					<label for="price-from">От </label>
-					<input type="number" id="price-from" name="price-from" value="0">
+					<input type="number" id="price-from" name="price-from" value="0" min=0>
 					<label for="price-to">До </label>
-					<input type="number" id="price-to" name="price-to" value="3000">
+					<input type="number" id="price-to" name="price-to" value="3000" min=0>
 				</fieldset>
 
 				<button type="submit">Показать</button>
@@ -118,7 +118,7 @@
 		<section>
 			<h2 class="visually-hidden">Результаты поиска</h2>
 			<ul>
-				
+
 				<li>
 					<h3><a href="">Amara Resort & Spa</a></h3>
 					<img src="img/h_hotel1.jpg" width="135" height="90" alt="Amara Resort & Spa">
@@ -180,10 +180,8 @@
 
 	<footer>
 
-		<p>
-			#visitsedona<br>
-			тел: +7(495) 666-02-66
-		</p>
+		<p>#visitsedona<br>
+		<p>тел: +7(495) 666-02-66</p>
 
 		<div>
 			<ul>
