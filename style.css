@@ -176,7 +176,7 @@ a {
 	line-height: auto;
 }
 
-.search-form input {
+.search-form-input {
 	border: 0;
 	font-size: 14px;
 	font-weight: bold;
@@ -186,6 +186,16 @@ a {
 
 	background-color: #f2f2f2;
 
+}
+
+.search-form-input:hover {
+	background-color: #e8e8e8;
+}
+
+.search-form-input:active,
+.search-form-input:focus {
+	background-color: #fff;
+	border: 2px solid #e5e5e5;
 }
 
 .button.blue {
@@ -275,3 +285,7 @@ a {
 	color: #333333;
 }
 
+.rating {
+	color: #666;
+	background-color: #f2f2f2;
+}
