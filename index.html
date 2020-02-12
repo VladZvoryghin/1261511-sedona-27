@@ -16,10 +16,10 @@
 			</a>
 
 			<ul>
-				<li class="left-align"><a class="nav-menu-item" href="">Информация</a></li>
-				<li class="left-align"><a class="nav-menu-item" href="">Фото и видео</a></li>
-				<li class="right-align"><a class="nav-menu-item" href="">Карта штата</a></li>
-				<li class="right-align"><a class="nav-menu-item" href="hotels.html">Гостиницы</a></li>
+				<li class="nav-menu-item left-align"><a href="">Информация</a></li>
+				<li class="nav-menu-item left-align"><a href="">Фото и видео</a></li>
+				<li class="nav-menu-item right-align"><a href="">Карта штата</a></li>
+				<li class="nav-menu-item right-align"><a href="hotels.html">Гостиницы</a></li>
 			</ul>
 
 		</nav>
@@ -27,8 +27,12 @@
 
 	<main class="container">
 
-		<h1 class="page-title visually-hidden">Добро пожаловать в Седону</h1>
-	
+		<h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+
+		<div class="main-promo">
+			<img class="main-promo-welcome" src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
+		</div>
+
 		<section>
 			<h2 class="visually-hidden">О Седоне</h2>
 			<p class="big-slogan">
@@ -47,29 +51,50 @@
 
 			<button class="button show-search" type="button" name="show-search-form">Поиск гостиницы в Седоне</button>
 
-			<form class="search-form" action="https://echo.htmlacademy.ru" class="modal model-open" method="get">
+			<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
 				<p>
 					<label for="checkin-date">Дата заезда: </label>
-					<input type="text" name="checkin-date" id="checkin-date" value="2017-04-24">
-					<button class="calendar-widget" type="button">Выбор даты заезда</button>
+					<!-- Див оформим позже -->
+					<!-- div class="date-input-container"> -->
+					<input type="text" name="checkin-date" id="checkin-date" value="24 апреля 2017">
+					<button class="calendar-widget" type="button">
+						<span>Выбор даты</span>
+					</button>
+
+					<!-- /div> -->
 				</p>
 
 				<p>
 					<label for="checkout-date">Дата выезда: </label>
-					<input type="text" name="checkout-date" id="checkout-date" value="2017-07-04">
-					<button class="calendar-widget" type="button">Выбор даты выезда</button>
+					<!-- Див оформим позже -->
+					<!-- div class="date-input-container"> -->
+					<input type="text" name="checkout-date" id="checkout-date" value="4 июля 2017">
+
+					<button class="calendar-widget" type="button">
+						<span>Выбор даты</span>
+					</button>
+
+					<!-- /div> -->
 				</p>
 
 				<p>
 					<label for="field-adults-qty">Взрослые:</label>
-					<button type="button" class="minus-action"><span class="visually-hidden">Минус</span></button>
+					<button type="button" class="minus-action">
+						<span>Минус</span>
+					</button>
 					<input type="number" name="adults-qty" id="field-adults-qty" value="2" min="0">
-					<button type="button" class="plus-action"><span class="visually-hidden">Плюс</span></button>
-					
+					<button type="button" class="plus-action">
+						<span>Плюс</span>
+					</button>
+
 					<label for="field-kids-qty">Дети:</label>
-					<button type="button" class="minus-action"><span class="visually-hidden">Минус</span></button>
+					<button type="button" class="minus-action">
+						<span>Минус</span>
+					</button>
 					<input type="number" name="kids-qty" id="field-kids-qty" value="0" min="0">
-					<button type="button" class="plus-action"><span class="visually-hidden">Плюс</span></button>
+					<button type="button" class="plus-action">
+						<span>Плюс</span>
+					</button>
 					
 				</p>
 				
@@ -83,8 +108,9 @@
 	<footer class="main-footer">
 
 		<div class="contacts">
-			<p>#visitsedona</p>
-			<p>тел: +7(495) 666-02-66</p>
+			<!-- мне кажется, здесь br оправдан: это семантически не новый абзац, все это - контакты -->
+			<p>#visitsedona<br>
+			тел: +7(495) 666-02-66</p>
 		</div>
 
 		<div class="social-buttons">
@@ -98,6 +124,7 @@
 		<div class="copyright">
 			<p>
 				website by:
+				<!-- лого должны быть белым с color overlay черным, пока не знаю, как это делать, оставлю так -->
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
 					<img src="img/logo_academy2.svg" width="115" height="41" alt="HTML Academy">
 				</a>

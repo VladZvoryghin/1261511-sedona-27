@@ -2,11 +2,14 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Каталог гостиниц: Седона</title>
+	<title>HTML Academy: Седона: Каталог гостиниц</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> 
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
-		<nav>
+		<nav class="main-navigation">
 			<a href="index.html">
 				<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
 			</a>
@@ -23,7 +26,8 @@
 	<main>
 		<h1 class="visually-hidden page-title">Каталог гостиниц</h1>
 
-		<section class="filters">
+		<!-- пока не верстаем -->
+		<!-- <section class="filters">
 			<h2 class="visually-hidden">Параметры поиска</h2>
 			<form action="https://echo.htmlacademy.ru" method="get">
 				<fieldset>
@@ -85,7 +89,7 @@
 				<button type="submit">Показать</button>
 			</form>
 
-		</section>
+		</section> 
 
 		<section>
 			<h2 class="visually-hidden">Сортировка</h2>
@@ -114,20 +118,21 @@
 					<a href=""><span class="visually-hidden">По убыванию</span></a>
 				</li>
 			</ul>
-		</section>
-		<section>
+		</section> -->
+		<section class="search-results">
 			<h2 class="visually-hidden">Результаты поиска</h2>
-			<ul>
+			<ul class="search-results-main-list">
 
-				<li>
-					<h3><a href="">Amara Resort & Spa</a></h3>
-					<img src="img/h_hotel1.jpg" width="135" height="90" alt="Amara Resort & Spa">
+				<li class="search-results-item">
+					<h3><a class="hotel-link" href="">Amara Resort & Spa</a></h3>
+					<!-- убрал alt для ally: нет смысла повторять заголовок отеля. С другой стороны валидатор ругается - как быть? -->
+					<img src="img/h_hotel1.jpg" width="135" height="90">
 					<p>
 						<span class="category">Гостиница</span>
 						<span class="price">от 4000 р.</span>
 					</p>
-					<a href="#">Подробнее</a>
-					<a href="#">Забронировать</a>
+					<a class="button blue" href="#">Подробнее</a>
+					<a class="button" href="#">Забронировать</a>
 
 
 					<div class="add-info">
@@ -137,15 +142,15 @@
 					</div>
 				</li>
 
-				<li>
-					<h3><a href="">Desert Quail Inn</a></h3>
-					<img src="img/h_hotel2.jpg" width="135" height="90" alt="Desert Quail Inn">
+				<li class="search-results-item">
+					<h3><a class="hotel-link" href="">Desert Quail Inn</a></h3>
+					<img src="img/h_hotel2.jpg" width="135" height="90">
 					<p>
 						<span class="category">Мотель</span>
 						<span class="price">от 3000 р.</span>
 					</p>
-					<a href="#">Подробнее</a>
-					<a href="#">Забронировать</a>
+					<a class="button blue" href="#">Подробнее</a>
+					<a class="button" href="#">Забронировать</a>
 
 
 					<div class="add-info">
@@ -155,15 +160,15 @@
 					</div>
 				</li>
 
-				<li>
-					<h3><a href="">Villas at Poco Diablo</a></h3>
-					<img src="img/h_hotel3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+				<li class="search-results-item">
+					<h3><a class="hotel-link" href="">Villas at Poco Diablo</a></h3>
+					<img src="img/h_hotel3.jpg" width="135" height="90">
 					<p>
 						<span class="category">Апартаменты</span>
 						<span class="price">от 2000 р.</span>
 					</p>
-					<a href="#">Подробнее</a>
-					<a href="#">Забронировать</a>
+					<a class="button blue" href="#">Подробнее</a>
+					<a class="button" href="#">Забронировать</a>
 
 
 					<div class="add-info">
@@ -178,24 +183,32 @@
 
 	</main>
 
-	<footer>
+	<footer class="main-footer">
 
-		<p>#visitsedona</p>
-		<p>тел: +7(495) 666-02-66</p>
+		<div class="contacts">
+			<!-- мне кажется, здесь br оправдан: это семантически не новый абзац, все это - контакты -->
+			<p>#visitsedona<br>
+			тел: +7(495) 666-02-66</p>
+		</div>
 
-		<div>
-			<ul>
-				<li><a href="#">Твиттер</a></li>
-				<li><a href="#">Фейсбук</a></li>
-				<li><a href="#">Ютуб</a></li>
+		<div class="social-buttons">
+			<ul class="social-buttons-list">
+				<li><a class="button blue" href="#">Твиттер</a></li>
+				<li><a class="button blue" href="#">Фейсбук</a></li>
+				<li><a class="button blue" href="#">Ютуб</a></li>
 			</ul>
 		</div>
-		<p>
-			website by:
-			<a href="https://htmlacademy.ru/intensive/htmlcss">
-				<img src="img/logo_html_academy.svg" width="115" height="41" alt="HTML Academy">
-			</a>
-		</p>
+
+		<div class="copyright">
+			<p>
+				website by:
+				<!-- лого должны быть белым с color overlay черным, пока не знаю, как это делать, оставлю так -->
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/logo_academy2.svg" width="115" height="41" alt="HTML Academy">
+				</a>
+			</p>
+		</div>
+
 	</footer>
 
 
