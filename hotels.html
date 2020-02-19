@@ -5,30 +5,40 @@
 	<title>HTML Academy: Седона: Каталог гостиниц</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header>
-		<nav class="main-navigation">
-			<a href="index.html">
-				<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
-			</a>
+	<div class="container shady">
+		<header class="main-header">
+			<!-- <div class="main-header-background-wrapper"> -->
+				<div class="container nav-wrapper">
+					<nav class="main-navigation">
 
-			<ul>
-				<li class="nav-menu-item left-align"><a href="">Информация</a></li>
-				<li class="nav-menu-item left-align"><a href="">Фото и видео</a></li>
-				<li class="nav-menu-item right-align"><a href="">Карта штата</a></li>
-				<li class="nav-menu-item right-align site-navigation-current"><a href="">Гостиницы</a></li>
-			</ul>
-		</nav>
-	</header>
+						<ul class="site-navigation">
+							<li class="nav-menu-item left-align"><a href="">Информация</a></li>
+							<li class="nav-menu-item left-align"><a href="">Фото и видео</a></li>
+							<li class="nav-menu-item right-align"><a href="hotels.html">Гостиницы</a></li>
+							<li class="nav-menu-item right-align"><a href="">Карта штата</a></li>
+						</ul>
 
-	<main>
-		<h1 class="visually-hidden page-title">Каталог гостиниц</h1>
+						<div class="main-nav-logo">
+							<a href="#">
+								<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
+							</a>
+						</div>
 
-		<!-- пока не верстаем -->
-		<!-- <section class="filters">
-			<h2 class="visually-hidden">Параметры поиска</h2>
+					</nav>
+				</div>
+				<!-- </div> -->
+			</header>
+
+
+			<main>
+				<h1 class="visually-hidden page-title">Каталог гостиниц</h1>
+
+				<!-- пока не верстаем -->
+				<section class="filters container">
+		<!--	<h2 class="visually-hidden">Параметры поиска</h2>
 			<form action="https://echo.htmlacademy.ru" method="get">
 				<fieldset>
 					<legend>Инфраструктура</legend>
@@ -117,25 +127,30 @@
 				<li>
 					<a href=""><span class="visually-hidden">По убыванию</span></a>
 				</li>
-			</ul>
-		</section> -->
+			</ul> -->
+		</section>
 		<section class="search-results">
 			<h2 class="visually-hidden">Результаты поиска</h2>
-			<ul class="search-results-main-list">
+			<ul class="search-results-main-list container">
 
 				<li class="search-results-item">
-					<h3><a class="hotel-link" href="">Amara Resort & Spa</a></h3>
+					<div class="search-results-hotel-details">
+						<h3><a class="search-results-hotel-link" href="">Amara Resort & Spa</a></h3>
+						<div class="search-results-category-and-price">
+							<span class="search-results-category">Гостиница</span>
+							<span class="search-results-price">от 4000 р.</span>
+						</div>
+						<div class="search-results-buttons">
+							<a class="button blue" href="#">Подробнее</a>
+							<a class="button" href="#">Забронировать</a>
+						</div>
+					</div>
+
 					<!-- убрал alt для ally: нет смысла повторять заголовок отеля. С другой стороны валидатор ругается - как быть? -->
-					<img src="img/h_hotel1.jpg" width="135" height="90">
-					<p>
-						<span class="category">Гостиница</span>
-						<span class="price">от 4000 р.</span>
-					</p>
-					<a class="button blue" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
-
-
-					<div class="add-info">
+					<img class="search-results-hotel-picture" src="img/h_hotel1.jpg" width="135" height="90">
+					
+					
+					<div class="search-results-add-info">
 						<h4 class="visually-hidden">Дополнительная информация</h4>
 						<div class="stars four-stars">4 звезды</div>
 						<p class="rating">Рейтинг: 8,5</p>
@@ -143,17 +158,22 @@
 				</li>
 
 				<li class="search-results-item">
-					<h3><a class="hotel-link" href="">Desert Quail Inn</a></h3>
-					<img src="img/h_hotel2.jpg" width="135" height="90">
-					<p>
-						<span class="category">Мотель</span>
-						<span class="price">от 3000 р.</span>
-					</p>
-					<a class="button blue" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
+					<div class="search-results-hotel-details">
+						<h3><a class="search-results-hotel-link" href="">Desert Quail Inn</a></h3>
+						<div class="search-results-category-and-price">
+							<span class="search-results-category">Мотель</span>
+							<span class="search-results-price">от 3000 р.</span>
+						</div>
+						<div class="search-results-buttons">
+							<a class="button blue" href="#">Подробнее</a>
+							<a class="button" href="#">Забронировать</a>
+						</div>
+					</div>
 
-
-					<div class="add-info">
+					<img class="search-results-hotel-picture" src="img/h_hotel2.jpg" width="135" height="90">
+					
+					
+					<div class="search-results-add-info">
 						<h4 class="visually-hidden">Дополнительная информация</h4>
 						<div class="stars three-stars">3 звезды</div>
 						<p class="rating">Рейтинг: 8,5</p>
@@ -161,17 +181,22 @@
 				</li>
 
 				<li class="search-results-item">
-					<h3><a class="hotel-link" href="">Villas at Poco Diablo</a></h3>
-					<img src="img/h_hotel3.jpg" width="135" height="90">
-					<p>
-						<span class="category">Апартаменты</span>
-						<span class="price">от 2000 р.</span>
-					</p>
-					<a class="button blue" href="#">Подробнее</a>
-					<a class="button" href="#">Забронировать</a>
+					<div class="search-results-hotel-details">
+						<h3><a class="search-results-hotel-link" href="">Villas at Poco Diablo</a></h3>
+						<div class="search-results-category-and-price">
+							<span class="search-results-category">Апартаменты</span>
+							<span class="search-results-price">от 2000 р.</span>
+						</div>
+						<div class="search-results-buttons">
+							<a class="button blue" href="#">Подробнее</a>
+							<a class="button" href="#">Забронировать</a>
+						</div>
+					</div>
+					
+					<img class="search-results-hotel-picture" src="img/h_hotel3.jpg" width="135" height="90">
 
 
-					<div class="add-info">
+					<div class="search-results-add-info">
 						<h4 class="visually-hidden">Дополнительная информация</h4>
 						<div class="stars two-stars">2 звезды</div>
 						<p class="rating">Рейтинг: 9,2</p>
@@ -181,17 +206,19 @@
 			</ul>
 		</section>
 
+
+
 	</main>
 
-	<footer class="main-footer">
+	<footer class="main-footer container">
 
-		<div class="contacts">
+		<div class="footer-contacts">
 			<!-- мне кажется, здесь br оправдан: это семантически не новый абзац, все это - контакты -->
 			<p>#visitsedona<br>
 			тел: +7(495) 666-02-66</p>
 		</div>
 
-		<div class="social-buttons">
+		<div class="footer-social-buttons">
 			<ul class="social-buttons-list">
 				<li><a class="button blue" href="#">Твиттер</a></li>
 				<li><a class="button blue" href="#">Фейсбук</a></li>
@@ -199,7 +226,7 @@
 			</ul>
 		</div>
 
-		<div class="copyright">
+		<div class="footer-copyright">
 			<p>
 				website by:
 				<!-- лого должны быть белым с color overlay черным, пока не знаю, как это делать, оставлю так -->
@@ -211,6 +238,6 @@
 
 	</footer>
 
-
+</div>
 </body>
 </html>

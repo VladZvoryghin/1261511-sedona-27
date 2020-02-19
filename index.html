@@ -5,133 +5,142 @@
 	<title>HTML Academy: Седона</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 </head>
-<body>
-	<header>
-		<nav class="main-navigation">
-			<a href="#">
-				<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
-			</a>
+<body class="main-page grey-background">
+	<div class="container shady">
+		<header class="main-header">
+			<div class="main-header-background-wrapper">
+				<div class="container nav-wrapper">
+					<nav class="main-navigation">
 
-			<ul>
-				<li class="nav-menu-item left-align"><a href="">Информация</a></li>
-				<li class="nav-menu-item left-align"><a href="">Фото и видео</a></li>
-				<li class="nav-menu-item right-align"><a href="">Карта штата</a></li>
-				<li class="nav-menu-item right-align"><a href="hotels.html">Гостиницы</a></li>
-			</ul>
+						<ul class="site-navigation">
+							<li class="nav-menu-item left-align"><a href="">Информация</a></li>
+							<li class="nav-menu-item left-align"><a href="">Фото и видео</a></li>
+							<li class="nav-menu-item right-align"><a href="hotels.html">Гостиницы</a></li>
+							<li class="nav-menu-item right-align"><a href="">Карта штата</a></li>
+						</ul>
 
-		</nav>
-	</header>
+						<div class="main-nav-logo">
+							<a href="#">
+								<img src="img/logo.svg" width="140" height="71" alt="Логотип города Седона">
+							</a>
+						</div>
 
-	<main class="container">
+					</nav>
+				</div>
+				<div class="container main-promo-welcome">
+					<img src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
+					<img class="for-polygon" src="img/polygon.svg" width="1200" height="59">
+				</div>
+			</div>
+		</header>
 
-		<h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+		<main class="container main">
+			<!-- <h1 class="visually-hidden">Добро пожаловать в Седону</h1> -->
 
-		<div class="main-promo">
-			<img class="main-promo-welcome" src="img/welcome.png" width="459" height="353" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'">
-		</div>
+			<section class="about-sedona">
+				<!-- <h2 class="visually-hidden">О Седоне</h2> -->
+				<p class="about-sedona-slogan">
+					Седона - небольшой городок в Аризоне, заслуживающий большего!
+				</p>
+				<p class="features-preface">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+			</section>
 
-		<section>
-			<h2 class="visually-hidden">О Седоне</h2>
-			<p class="big-slogan">
-				Седона - небольшой городок в Аризоне, заслуживающий большего!
-			</p>
-			<p class="features-preface">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-		</section>
-
-		<section class="search">
-			<h2 class="visually-hidden">Поиск гостиниц</h2>
-			<p class="search-slogan">Заинтересовались?</p>
-			<p class="search-invitation">
-				Укажите предполагаемые даты поездки,<br>
-				и мы покажем вам лучшие предложения гостиниц в Седоне
-			</p>
-
-			<button class="button show-search" type="button" name="show-search-form">Поиск гостиницы в Седоне</button>
-
-			<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-				<p>
-					<label for="checkin-date">Дата заезда: </label>
-					<!-- Див оформим позже -->
-					<!-- div class="date-input-container"> -->
-					<input class="search-form-input" type="text" name="checkin-date" id="checkin-date" value="24 апреля 2017">
-					<button class="calendar-widget" type="button">
-						<span>Выбор даты</span>
-					</button>
-
-					<!-- /div> -->
+			<section class="search">
+				<h2 class="visually-hidden">Поиск гостиниц</h2>
+				<p class="search-slogan">Заинтересовались?</p>
+				<p class="search-invitation">
+					Укажите предполагаемые даты поездки,<br>
+					и мы покажем вам лучшие предложения гостиниц в Седоне
 				</p>
 
+				<button class="button show-search" type="button" name="show-search-form">Поиск гостиницы в Седоне</button>
+
+				<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+					<div class="search-form-container">
+						<div class="search-form-item">
+							<label for="checkin-date">Дата заезда: </label>
+							<!-- Див оформим позже -->
+							<!-- div class="date-input-container"> -->
+							<input class="search-form-input date-field" type="text" name="checkin-date" id="checkin-date" value="24 апреля 2017">
+							<button class="visually-hidden calendar-widget" type="button">
+								<span>Выбор даты</span>
+							</button>
+
+							<!-- /div> -->
+						</div>
+
+						<div class="search-form-item">
+							<label for="checkout-date">Дата выезда: </label>
+							<!-- Див оформим позже -->
+							<!-- div class="date-input-container"> -->
+							<input class="search-form-input date-field" type="text" name="checkout-date" id="checkout-date" value="4 июля 2017">
+
+							<button class="visually-hidden calendar-widget" type="button">
+								<span>Выбор даты</span>
+							</button>
+
+							<!-- /div> -->
+						</div>
+
+						<div class="search-form-item visitors-field">
+							<label for="field-adults-qty">Взрослые:</label>
+							<button type="button" class="minus-action">
+								<span>Минус</span>
+							</button>
+							<input class="search-form-input" type="number" name="adults-qty" id="field-adults-qty" value="2" min="0">
+							<button type="button" class="plus-action">
+								<span>Плюс</span>
+							</button>
+
+							<label for="field-kids-qty">Дети:</label>
+							<button type="button" class="minus-action">
+								<span>Минус</span>
+							</button>
+							<input class="search-form-input" type="number" name="kids-qty" id="field-kids-qty" value="0" min="0">
+							<button type="button" class="plus-action">
+								<span>Плюс</span>
+							</button>
+
+						</div>
+
+						<button class="button blue submit-button" type="submit">Найти</button>
+					</div>
+				</form>
+			</section>
+
+			<img src="img/index_geo_map.png" alt="Карта штата и города Седона" width="1200" height="593">
+		</main>
+
+		<footer class="main-footer container">
+
+			<div class="footer-contacts">
+				<!-- мне кажется, здесь br оправдан: это семантически не новый абзац, все это - контакты -->
+				<p>#visitsedona<br>
+				тел: +7(495) 666-02-66</p>
+			</div>
+
+			<div class="footer-social-buttons">
+				<ul class="social-buttons-list">
+					<li><a class="button blue" href="#">Твиттер</a></li>
+					<li><a class="button blue" href="#">Фейсбук</a></li>
+					<li><a class="button blue" href="#">Ютуб</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-copyright">
 				<p>
-					<label for="checkout-date">Дата выезда: </label>
-					<!-- Див оформим позже -->
-					<!-- div class="date-input-container"> -->
-					<input class="search-form-input" type="text" name="checkout-date" id="checkout-date" value="4 июля 2017">
-
-					<button class="calendar-widget" type="button">
-						<span>Выбор даты</span>
-					</button>
-
-					<!-- /div> -->
+					website by:
+					<!-- лого должны быть белым с color overlay черным, пока не знаю, как это делать, оставлю так -->
+					<a href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo_academy2.svg" width="115" height="41" alt="HTML Academy">
+					</a>
 				</p>
+			</div>
 
-				<p>
-					<label for="field-adults-qty">Взрослые:</label>
-					<button type="button" class="minus-action">
-						<span>Минус</span>
-					</button>
-					<input class="search-form-input" type="number" name="adults-qty" id="field-adults-qty" value="2" min="0">
-					<button type="button" class="plus-action">
-						<span>Плюс</span>
-					</button>
-
-					<label for="field-kids-qty">Дети:</label>
-					<button type="button" class="minus-action">
-						<span>Минус</span>
-					</button>
-					<input class="search-form-input" type="number" name="kids-qty" id="field-kids-qty" value="0" min="0">
-					<button type="button" class="plus-action">
-						<span>Плюс</span>
-					</button>
-					
-				</p>
-				
-				<button class="button blue" type="submit">Найти</button>
-			</form>
-		</section>
-
-		<img src="img/index_geo_map.png" alt="Карта штата и города Седона" width="1200" height="593">
-	</main>
-
-	<footer class="main-footer">
-
-		<div class="contacts">
-			<!-- мне кажется, здесь br оправдан: это семантически не новый абзац, все это - контакты -->
-			<p>#visitsedona<br>
-			тел: +7(495) 666-02-66</p>
-		</div>
-
-		<div class="social-buttons">
-			<ul class="social-buttons-list">
-				<li><a class="button blue" href="#">Твиттер</a></li>
-				<li><a class="button blue" href="#">Фейсбук</a></li>
-				<li><a class="button blue" href="#">Ютуб</a></li>
-			</ul>
-		</div>
-
-		<div class="copyright">
-			<p>
-				website by:
-				<!-- лого должны быть белым с color overlay черным, пока не знаю, как это делать, оставлю так -->
-				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/logo_academy2.svg" width="115" height="41" alt="HTML Academy">
-				</a>
-			</p>
-		</div>
-
-	</footer>
-
+		</footer>
+	</div>
 </body>
 </html>
